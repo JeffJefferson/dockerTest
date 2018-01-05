@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Explode') {
+    stage('DockerTest') {
       steps {
-           echo 'Boom!!!!'
+           bat "docker build -t test ."
       }
     }  
   }
