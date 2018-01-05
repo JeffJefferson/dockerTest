@@ -15,6 +15,7 @@ pipeline {
     stage('Publish Docker Image') {
       steps {
            bat "docker tag test localhost:5000/hello-nginx"
+           bat "docker push localhost:5000/hello-nginx"
       }
     }  
     
