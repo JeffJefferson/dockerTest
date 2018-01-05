@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        app = docker.build("my-nginx")
+        docker.build("my-nginx")
       }
     }
     stage('Test') {
