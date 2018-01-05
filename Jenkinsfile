@@ -3,9 +3,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Building..'
-        docker.build("my-nginx")
+        echo 'Building..'    
       }
+          docker.build("my-nginx")
     }
     stage('Test') {
       steps {
