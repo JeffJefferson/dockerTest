@@ -7,8 +7,7 @@ pipeline {
       }
     }  
     stage('Test Docker Image') {
-      steps {
-           bat "docker run --rm -d -p 82:80 test"
+      steps {           
            bat "hh http://localhost:82"          
       }
     }  
