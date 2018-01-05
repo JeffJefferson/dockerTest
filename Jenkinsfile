@@ -8,7 +8,7 @@ pipeline {
     }  
     stage('Run Docker Image') {
       steps {
-           bat "docker run -p 82:80 test"
+           bat "docker run -d -p 82:80 test"
       }
     }  
   }
