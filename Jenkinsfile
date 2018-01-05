@@ -6,9 +6,10 @@ pipeline {
            bat "docker build -t test ."
       }
     }  
-    stage('Run Docker Image') {
+    stage('Test Docker Image') {
       steps {
            bat "docker run -d -p 82:80 test"
+           bat "hh http://localhost:82"
       }
     }  
     
