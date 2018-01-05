@@ -5,7 +5,6 @@ pipeline {
       steps {
         echo 'Building..'    
       }
-          docker.build("my-nginx")
     }
     stage('Test') {
       steps {
