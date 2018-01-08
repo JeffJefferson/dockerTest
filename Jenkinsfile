@@ -1,10 +1,18 @@
 pipeline {
  agent any
   stages {
-    stage('Build Docker Image') {
-       agent{ 
+    stage('PreStage') {
+      steps {           
+           echo "prepare..."          
+      }
+    }  
+   stage('experimental') {
+        agent{ 
         dockerfile true
       }
+    } 
+   
+    stage('Build Docker Image manually') {    
       steps {
            bat "docker build -t test ."
       }
