@@ -6,6 +6,7 @@ pipeline {
            echo "prepare..."          
       }
     }  
+   /* 
    stage('experimental') {
         agent{ 
         dockerfile true
@@ -14,10 +15,12 @@ pipeline {
            echo "try building dockerfile using agent..."           
       }
     } 
+    */
    
     stage('Build Docker Image manually') {    
       steps {
-           bat "docker build -t test ."
+      
+           bat "docker build -t test -f "Dockerfile" ."
       }
     }  
     stage('Test Docker Image') {
