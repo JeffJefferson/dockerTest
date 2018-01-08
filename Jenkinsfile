@@ -20,7 +20,7 @@ pipeline {
     stage('Build Docker Image manually') {    
       steps {
       
-           bat "docker build -t test -f "Dockerfile" ."
+           bat "docker build -t test -f Dockerfile ."
       }
     }  
     stage('Test Docker Image') {
