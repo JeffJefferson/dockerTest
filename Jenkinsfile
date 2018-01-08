@@ -6,16 +6,16 @@ pipeline {
            echo "prepare..."          
       }
     }  
-   /* 
+   
    stage('experimental') {
         agent{ 
-        dockerfile true
+        docker 'ngingx'
       }
      steps {           
            echo "try building dockerfile using agent..."           
       }
     } 
-    */
+    
    
     stage('Build Docker Image manually') {    
       steps {
